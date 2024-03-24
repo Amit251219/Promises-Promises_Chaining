@@ -35,17 +35,21 @@ savetoDB("Test Data")
 //promise chaining
 
 savetoDB("first Data")
-  .then(() => {
+  .then((result) => {
     console.log("data1 Saved");
+    console.log("Rssult pf promise",result);
     return savetoDB("second data");
   })
-  .then(() => {
+  .then((result) => {
     console.log("data2 Saved");
+    console.log("Rssult pf promise",result);
     return savetoDB("third data");
   })
-  .then(() => {
+  .then((result) => {
     console.log("data3 Saved");
+    console.log("Rssult pf promise",result);
   })
-  .catch(() => {
+  .catch((error) => {
     console.log("promise was rejected");
+    console.log("Rssult pf promise",error);
   });
